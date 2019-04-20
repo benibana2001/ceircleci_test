@@ -1,17 +1,15 @@
-version: 2.0
+# Golang CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-go/ for more details
+version: 2
 jobs:
   build:
     docker:
-      - image: alpine:3.7
+      - image: circleci/golang:1.8
+
+    working_directory: /go/src/github.com//benibana2001/ceircleci_test
     steps:
       - checkout
-      - run:
-          name: The First Step
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-      - run:
-          name: Code Has Arrived
-          command: |
-            ls -al
-            echo '^^^That should look familiar^^^'
+      # specify any bash command here prefixed with `run: `
+      - run: go get -v -t -d ./...
+      - run: go test -v ./...
