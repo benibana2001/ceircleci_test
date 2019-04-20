@@ -1,7 +1,9 @@
-package main
+package circleci
 
-import "fmt"
+func Hello(s string) string{
+	return "Hello World, " + s
+}
 
-func main()  {
-	fmt.Println("Hello World!")
+func Bye(s string) string{
+	return "Good Bye, " + s
 }
