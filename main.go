@@ -1,7 +1,7 @@
 package circleci
 
 func Hello(s string) string{
-	return "Hello World, " + s + s
+	return "Hello World, " + s
 }
 
 func Bye(s string) string{
