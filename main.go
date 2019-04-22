@@ -1,9 +1,18 @@
-package circleci
+package main
 
-func Hello(s string) string{
-	return "Hello World, " + s
+import (
+	"./src/hello"
+	"fmt"
+	"net/http"
+)
+
+func handler(w http.ResponseWriter, r *http.Request)  {
+	t := hello.Hello("Mario")
+	//t := "Hello World!"
+	fmt.Fprintf(w, "%v", t)
 }
 
-func Bye(s string) string{
-	return "Good Bye, " + s
+func main(){
+	http.HandleFunc("/", handler)
+	http.ListenAndServe(":8080", nil)
 }

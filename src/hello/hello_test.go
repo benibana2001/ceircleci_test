@@ -1,4 +1,4 @@
-package circleci
+package hello
 
 import "testing"
 

@@ -1,0 +1,10 @@
+version: "3"
+services:
+  circleci_go:
+    build:
+      context: "./"
+    tty: true
+    ports:
+      - 8099:8080
+    volumes:
+      - ".:/go/src/app"
