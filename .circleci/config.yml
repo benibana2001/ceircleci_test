@@ -4,9 +4,9 @@
 version: 2
 jobs:
   build:
-    environment:
-      - GOPATH: /go
-      - PATH: $GOPATH/bin:/usr/local/go/bin:$PATH
+#    environment:
+#      - GOPATH: /go
+#      - PATH: $GOPATH/bin:/usr/local/go/bin:$PATH
     docker:
       - image: circleci/golang:1.12
 
