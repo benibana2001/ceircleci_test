@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./src/hello"
+	"./github.com/benibana2001/hello"
 	"fmt"
 	"net/http"
 )

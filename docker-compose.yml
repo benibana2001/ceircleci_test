@@ -7,4 +7,4 @@ services:
     ports:
       - 8099:8080
     volumes:
-      - ".:/go/src/app"
+      - "./src:/go/src"
