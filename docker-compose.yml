@@ -6,5 +6,5 @@ services:
     tty: true
     ports:
       - 8099:8080
-    volumes:
-      - "./src:/go/src"
+#    volumes:
+#      - "./src:/go/src"
