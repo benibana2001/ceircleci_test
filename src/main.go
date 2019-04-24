@@ -1,14 +1,14 @@
 package main
 
 import (
-	//"./github.com/benibana2001/hello"
+	"github.com/benibana2001/hello"
 	"fmt"
 	"net/http"
 )
 
 func handler(w http.ResponseWriter, r *http.Request)  {
-	//t := hello.Hello("Mario")
-	t := "Hello World!"
+	t := hello.Hello("Mario")
+	//t := "Hello World!"
 	fmt.Fprintf(w, "%v", t)
 }
 
